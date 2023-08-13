@@ -28,6 +28,7 @@ const MultipleSelectList: React.FC<MultipleSelectListProps> = ({
     dropdownTextStyles,
     maxHeight,
     data,
+    selectedData=[],
     searchicon = false,
     arrowicon = false,
     closeicon = false,
@@ -50,7 +51,7 @@ const MultipleSelectList: React.FC<MultipleSelectListProps> = ({
     const oldOption = React.useRef(null)
     const [_firstRender, _setFirstRender] = React.useState<boolean>(true);
     const [dropdown, setDropdown] = React.useState<boolean>(dropdownShown);
-    const [selectedval, setSelectedVal] = React.useState<any>([]);
+    const [selectedval, setSelectedVal] = React.useState<any>(selectedData);
     const [height, setHeight] = React.useState<number>(350)
     const animatedvalue = React.useRef(new Animated.Value(0)).current;
     const [filtereddata, setFilteredData] = React.useState(data);
