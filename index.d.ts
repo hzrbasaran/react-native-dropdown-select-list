@@ -161,6 +161,8 @@ export interface MultipleSelectListProps  {
     */
     data: Array<{}>,
 
+    selectedData:Array<{}>,
+
     /**
     * The default option of the select list
     */
